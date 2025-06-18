@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Sign Up</title>
+  <link rel="stylesheet" href="auth.css">
+</head>
+<body>
+   <button id="toggleMode">🌙 Dark Mode</button>
+  <div id="container">
+    <h2>Signup</h2>
+  <form id="signupForm">
+    <input type="email" id="email" placeholder="Email" required /><br><br>
+    <input type="password" id="password" placeholder="Password" required /><br><br>
+    <button type="submit">Signup</button>
+  </form>
+  </div>
+  
+
+  <script>
+    document.getElementById("signupForm").addEventListener("submit", async (e) => {
+      e.preventDefault();
+      const email = document.getElementById("email").value;
+      const password = document.getElementById("password").value;
+
+      const res = await fetch("http://quickTasks-backend.onrender.com/api/signup", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email, password }),
+      });
+
+      const data = await res.json();
+      if (res.ok) {
+        alert("Signup successful! Go to login.");
+        window.location.href = "login.html";
+      } else {
+        alert(data.message);
+      }
+    });
+    const toggleButton = document.getElementById("toggleMode");
+
+  // Load mode from localStorage
+  if (localStorage.getItem("mode") === "dark") {
+    document.body.classList.add("dark-mode");
+  }
+
+  toggleButton.addEventListener("click", () => {
+    document.body.classList.toggle("dark-mode");
+    const isDark = document.body.classList.contains("dark-mode");
+    localStorage.setItem("mode", isDark ? "dark" : "light");
+  });
+
+  </script>
+</body>
+</html>

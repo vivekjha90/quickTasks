@@ -1,0 +1,139 @@
+#container{
+    height: fit-content;
+    width: 400px;
+    background-color: rgb(26, 7, 57);
+    border-radius: 12px;
+    padding: 10px;
+    color: white;
+    left: 50%;
+     position: absolute;
+    transform: translate(-50%,-50%);
+    top: 50%;
+}
+body{
+  background-color: #ebeef1;
+}
+#logout{
+  height: 40px;
+  width: 70px;
+  border: none;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+ margin-left: 42%;
+  background-color: #60e6b7;
+}
+#logout:hover{
+  box-shadow: 5px 5px 10px;
+}
+#appName{
+  color:rgb(246, 248, 249);
+  text-align: center;
+  font-size: 60px;
+  background-color: #000000;
+ border-radius: 12px;
+   padding: 6px;
+   box-shadow: 5px 5px 10px;
+}
+.done {
+  text-decoration: line-through;
+  color: gray;
+}
+
+.doneBtn {
+  background-color: #dcee15;
+  color: rgb(255, 252, 252);
+  border: none;
+  border-radius: 6px;
+  padding: 4px 8px;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.doneBtn:hover {
+  background-color: #15f358;
+}
+.deleteBtn:hover{
+  background-color: #a31919;
+}
+.deleteBtn{
+  border: none;
+  border-radius: 6px;
+  padding: 4px 8px;
+}
+
+#container h3{
+    text-align: center;
+    color: black;
+}
+#inner{
+    background-color: #58d66f;
+    padding: 12px;
+   border-radius: 12px;
+   margin: 12px;
+}
+#inputbox{
+    background-color: #27bfa6;
+   display: flex;
+   border-radius: 12px;
+   align-items:center;
+   justify-content: space-evenly;
+   padding: 10px;
+}
+#inputbox #task{
+    height: 32px;
+    width: 250px;
+    border-radius: 12px;
+    border: none;
+}
+#inputbox #btn{
+  height: 32px;
+  width: 70px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  
+}
+#inputbox #btn:hover{
+  background-color: #1b3fc0;
+  color: aliceblue;
+}
+
+body.dark-mode {
+      background-color: #1e1e1e;
+      color: white;
+    }
+
+    body.dark-mode #container {
+      background-color: #2c2c2c;
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+    }
+
+    body.dark-mode input,
+    body.dark-mode button {
+      background-color: #3d3d3d;
+      color: white;
+      border: 1px solid #555;
+    }
+
+    body.dark-mode #btn,
+    body.dark-mode #logout,
+    body.dark-mode #toggleMode {
+      background-color: #0d6efd;
+      color: white;
+    }
+
+    #toggleMode {
+      position: absolute;
+      top: px;
+      right: 10px;
+      padding: 6px 10px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    #logout {
+      margin-top: 20px;
+    }
